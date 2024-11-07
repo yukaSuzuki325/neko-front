@@ -6,7 +6,7 @@
   </div>
   <div class="q-my-md text-h5 text-white">OUT 22nd Nov 2024</div>
   <q-img
-    src="/public/photos/windfall.jpg"
+    src="/photos/windfall.jpg"
     style="max-width: 500px"
     class="fit-cover q-my-lg windfall-img"
   />

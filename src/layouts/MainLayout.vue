@@ -40,7 +40,7 @@
         </div>
         <div class="home-content">
           <img
-            src="/public/photos/NEKO-LOGO-black.png"
+            src="/photos/NEKO-LOGO-black.png"
             alt="band logo"
             class="logo-img"
           />
@@ -180,14 +180,14 @@ const goTo = (url) => {
 }
 
 .bg-image {
-  background-image: url("/public/photos/pic11.jpg");
+  background-image: url("/photos/pic11.jpg");
   background-size: cover;
   background-position: center;
   height: 100vh;
 }
 
 .middle {
-  background-image: url("/public/photos/pic12.jpg");
+  background-image: url("/photos/pic12.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;

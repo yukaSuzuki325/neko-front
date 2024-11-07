@@ -53,7 +53,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("/public/photos/Neko-Band1.jpg");
+  background-image: url("/photos/Neko-Band1.jpg");
   background-size: cover;
   background-position: center;
   opacity: 0.6;
