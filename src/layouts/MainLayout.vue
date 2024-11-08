@@ -189,7 +189,7 @@ const goTo = (url) => {
 .middle {
   background-image: url("/photos/pic12.jpg");
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: fixed !important;
   background-position: center;
 }
 
