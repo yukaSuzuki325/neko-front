@@ -1,7 +1,7 @@
 <template>
   <div class="text-h4 text-pink q-mb-lg">CONTACT</div>
   <div class="contact-form-container q-pb-sm">
-    <form @submit.prevent="sendEnquiry" class="contact-form">
+    <form @submit.prevent="sendMessage" class="contact-form">
       <label for="name" class="form-label">Name</label>
       <input
         type="text"
@@ -49,28 +49,27 @@ const form = ref({
 const statusMessage = ref("");
 const statusClass = ref("");
 
-const sendEnquiry = async () => {
-  alert("Message sent");
-  //   try {
-  //     const response = await fetch("https://your-backend-api.com/send-email", {
-  //       method: "POST",
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //       },
-  //       body: JSON.stringify(form.value),
-  //     });
-  //     if (response.ok) {
-  //       statusMessage.value = "Your message was sent successfully!";
-  //       statusClass.value = "bg-positive text-white";
-  //       form.value = { name: "", email: "", message: "" };
-  //     } else {
-  //       statusMessage.value = "There was a problem sending your message.";
-  //       statusClass.value = "bg-negative text-white";
-  //     }
-  //   } catch (error) {
-  //     statusMessage.value = "An error occurred. Please try again later.";
-  //     statusClass.value = "bg-negative text-white";
-  //   }
+const sendMessage = async () => {
+  try {
+    const response = await fetch("http://localhost:3000/send-email", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(form.value),
+    });
+    if (response.ok) {
+      statusMessage.value = "Your message was sent successfully!";
+      statusClass.value = "bg-positive text-white";
+      form.value = { name: "", email: "", message: "" };
+    } else {
+      statusMessage.value = "There was a problem sending your message.";
+      statusClass.value = "bg-negative text-white";
+    }
+  } catch (error) {
+    statusMessage.value = "An error occurred. Please try again later.";
+    statusClass.value = "bg-negative text-white";
+  }
 };
 </script>
 
