@@ -1,6 +1,6 @@
 <template>
   <div class="text-center">
-    <div class="text-h4 text-pink-3">ABOUT</div>
+    <div class="text-h4 text-pink">ABOUT</div>
     <div class="bio text-center q-ma-lg">
       <div class="desc-container">
         <p class="q-pa-xl descriptions">

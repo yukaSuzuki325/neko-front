@@ -1,5 +1,5 @@
 <template>
-  <div class="text-h4 text-pink-3 q-mb-lg">CONTACT</div>
+  <div class="text-h4 text-pink q-mb-lg">CONTACT</div>
   <div class="contact-form-container q-pb-sm">
     <form @submit.prevent="sendEnquiry" class="contact-form">
       <label for="name" class="form-label">Name</label>

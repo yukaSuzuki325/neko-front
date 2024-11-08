@@ -1,7 +1,7 @@
 <template>
   <div class="text-center">
     <div class="q-mt-lg text-h3 text-white">
-      New EP <i class="text-pink-3">Windfall</i>
+      New EP <i class="text-pink">Windfall</i>
     </div>
   </div>
   <div class="q-my-md text-h5 text-white">OUT 22nd Nov 2024</div>
@@ -13,7 +13,7 @@
   <div class="text-h6 text-white q-my-sm">
     Available soon on
     <a
-      class="text-blue"
+      class="text-light-blue-2"
       href="https://open.spotify.com/intl-ja/artist/4KuIyNoadsNfMfXjk991XC?si=w61MhS-BQsaCvZN1cVaiAQ&nd=1&dlsi=63713a91043e44e2"
       >Spotify</a
     >

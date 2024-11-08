@@ -187,11 +187,17 @@ const goTo = (url) => {
 }
 
 .middle {
-  background-image: url("/photos/pic12.jpg");
+  background-image: url("/photos/pic13.jpg");
   background-repeat: no-repeat;
-  background-attachment: local;
+  background-attachment: fixed;
   background-position: center;
   background-size: cover;
+}
+
+@media screen and (max-width: 768px) {
+  .middle {
+    background-attachment: scroll;
+  }
 }
 
 .home-content {

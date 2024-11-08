@@ -1,5 +1,5 @@
 <template>
-  <div class="text-h4 text-pink-3 q-mb-lg">SHOW DATES</div>
+  <div class="text-h4 text-pink q-mb-lg">SHOW DATES</div>
   <div v-if="shows.length" class="show-dates-container">
     <div v-for="show in shows" :key="show.id" class="show-card">
       <div class="date-box">
