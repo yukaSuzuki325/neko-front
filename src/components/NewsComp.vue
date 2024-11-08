@@ -1,7 +1,7 @@
 <template>
   <div class="text-center">
     <div class="q-mt-lg text-h3 text-white">
-      The New EP <i class="text-pink-3">Windfall</i>
+      New EP <i class="text-pink-3">Windfall</i>
     </div>
   </div>
   <div class="q-my-md text-h5 text-white">OUT 22nd Nov 2024</div>
