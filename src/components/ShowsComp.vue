@@ -54,7 +54,7 @@ const shows = ref([
       month: "NOV",
       full: "Sat 30 Nov 2024",
     },
-    link: "https://www.thelanesbristol.com/",
+    link: "https://www.headfirstbristol.co.uk/whats-on/the-lanes/sat-30-nov-neko-free-entry--111583#e111583",
   },
 ]);
 </script>
