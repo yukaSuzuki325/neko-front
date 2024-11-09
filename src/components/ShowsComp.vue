@@ -32,7 +32,7 @@ const shows = ref([
       month: "NOV",
       full: "Wed 27 Nov 2024",
     },
-    link: "https://www.facebook.com/events/the-victoria-dalston/happy-science-neko-the-victoria-dalston-free-entry/385520723650830/",
+    link: "https://dice.fm/event/v386o6-neko-own-world-27th-nov-the-victoria-london-tickets",
   },
   {
     id: 2,

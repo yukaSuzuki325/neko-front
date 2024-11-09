@@ -118,7 +118,7 @@
 
     <!-- Footer -->
     <q-toolbar class="justify-center bg-dark">
-      <q-toolbar-title class="text-white"
+      <q-toolbar-title class="text-grey-6"
         >© 2024 NEKO. All Rights Reserved.</q-toolbar-title
       >
     </q-toolbar>
@@ -233,5 +233,14 @@ const goTo = (url) => {
 }
 
 @media (max-width: 1024px) {
+  #news,
+  #shows,
+  #videos,
+  #about,
+  #contact,
+  #discography,
+  #merch {
+    margin: 0px;
+  }
 }
 </style>

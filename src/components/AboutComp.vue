@@ -67,11 +67,15 @@
 }
 
 @media (max-width: 414px) {
+  .bio {
+    padding: 0px;
+    min-width: 350px;
+  }
   .desc-container {
     width: 100%;
   }
-  .bio {
-    padding: 0px;
+  .descriptions {
+    padding: 20px;
   }
 }
 </style>
