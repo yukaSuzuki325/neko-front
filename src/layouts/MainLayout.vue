@@ -3,7 +3,10 @@
     <q-page-container>
       <!-- Home Section -->
       <section id="home" class="bg-image">
-        <q-toolbar>
+        <q-toolbar
+          class="fixed-toolbar"
+          :class="{ 'toolbar-scrolled': isScrolled }"
+        >
           <!-- Hamburger button for mobile screens -->
           <q-btn
             flat
@@ -126,7 +129,7 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref, onMounted, onBeforeUnmount } from "vue";
 import { useQuasar } from "quasar";
 import NewsComp from "../components/NewsComp.vue";
 import ShowsComp from "../components/ShowsComp.vue";
@@ -138,6 +141,7 @@ import ContactComp from "../components/ContactComp.vue";
 
 const $q = useQuasar();
 const showMenu = ref(false);
+const isScrolled = ref(false);
 
 const sections = [
   { id: 1, sec: "home", title: "Home" },
@@ -167,9 +171,39 @@ const navigateToSection = (sectionId) => {
 const goTo = (url) => {
   window.open(url, "_blank");
 };
+
+const handleScroll = () => {
+  isScrolled.value = window.scrollY > 50;
+};
+
+onMounted(() => {
+  window.addEventListener("scroll", handleScroll);
+});
+
+onBeforeUnmount(() => {
+  window.removeEventListener("scroll", handleScroll);
+});
 </script>
 
 <style scoped>
+.fixed-toolbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* Ensures it stays above other content */
+  background-color: transparent;
+}
+.fixed-toolbar.toolbar-default {
+  background-color: transparent;
+}
+
+.fixed-toolbar.toolbar-scrolled {
+  background-color: rgb(250, 250, 250);
+  color: black;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
 .logo-img {
   width: 50%;
   height: auto;
