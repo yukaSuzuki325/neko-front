@@ -11,4 +11,10 @@ export const discography = [
     image: "/photos/king-louie-remixes.jpg",
     link: "https://nekoneko.bandcamp.com/album/king-louie-remixes",
   },
+  {
+    id: 3,
+    title: "Windfall",
+    image: "/photos/windfall.jpg",
+    link: "https://nekoneko.bandcamp.com/album/windfall",
+  },
 ];
