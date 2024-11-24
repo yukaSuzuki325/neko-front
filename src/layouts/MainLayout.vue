@@ -3,21 +3,18 @@
     <q-page-container>
       <!-- Home Section -->
       <section id="home" class="bg-image">
-        <q-toolbar
-          class="fixed-toolbar"
-          :class="{ 'toolbar-scrolled': isScrolled }"
-        >
-          <!-- Hamburger button for mobile screens -->
+        <q-toolbar class="fixed-toolbar">
+          <!-- Hamburger button for mobile screens or when scrolled -->
           <q-btn
             flat
             dense
             round
             icon="menu"
-            v-if="$q.screen.lt.md"
+            v-if="$q.screen.lt.md || isScrolled"
             @click="showMenu = !showMenu"
           />
           <!-- Render toolbar buttons directly on larger screens -->
-          <q-toolbar-title v-if="!$q.screen.lt.md">
+          <q-toolbar-title v-else>
             <q-btn
               v-for="section in sections"
               :key="section.id"
@@ -28,8 +25,11 @@
           </q-toolbar-title>
         </q-toolbar>
 
-        <!-- Dropdown menu for screens smaller than 1024px -->
-        <div v-if="showMenu && $q.screen.lt.md" class="dropdown-menu">
+        <!-- Dropdown menu for screens smaller than 1024px or when scrolled -->
+        <div
+          v-if="showMenu && ($q.screen.lt.md || isScrolled)"
+          class="dropdown-menu"
+        >
           <q-list>
             <q-item
               v-for="section in sections"
@@ -193,15 +193,7 @@ onBeforeUnmount(() => {
   right: 0;
   z-index: 1000; /* Ensures it stays above other content */
   background-color: transparent;
-}
-.fixed-toolbar.toolbar-default {
-  background-color: transparent;
-}
-
-.fixed-toolbar.toolbar-scrolled {
-  background-color: rgb(250, 250, 250);
-  color: black;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
 .logo-img {
@@ -253,7 +245,7 @@ onBeforeUnmount(() => {
 
 /* Style for the dropdown menu */
 .dropdown-menu {
-  position: absolute;
+  position: fixed;
   top: 60px;
   left: 0;
   right: 0;
