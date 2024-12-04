@@ -27,8 +27,4 @@
 
 <script setup></script>
 
-<style scoped>
-/* .windfall-img {
-  border: #ccc solid 1px;
-} */
-</style>
+<style scoped></style>
