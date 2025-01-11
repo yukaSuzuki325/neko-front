@@ -23,39 +23,17 @@
 import { ref } from "vue";
 
 const shows = ref([
-  {
-    id: 1,
-    city: "London",
-    venue: "The Victoria Dalston",
-    date: {
-      day: "27",
-      month: "NOV",
-      full: "Wed 27 Nov 2024",
-    },
-    link: "https://dice.fm/event/v386o6-neko-own-world-27th-nov-the-victoria-london-tickets",
-  },
-  {
-    id: 2,
-    city: "Cardiff",
-    venue: "The Moon",
-    date: {
-      day: "28",
-      month: "NOV",
-      full: "Thu 28 Nov 2024 ",
-    },
-    link: "https://www.themooncardiff.com/events/neko",
-  },
-  {
-    id: 3,
-    city: "Bristol",
-    venue: "The Lanes",
-    date: {
-      day: "30",
-      month: "NOV",
-      full: "Sat 30 Nov 2024",
-    },
-    link: "https://www.headfirstbristol.co.uk/whats-on/the-lanes/sat-30-nov-neko-free-entry--111583#e111583",
-  },
+  // {
+  //   id: 1,
+  //   city: "London",
+  //   venue: "The Victoria Dalston",
+  //   date: {
+  //     day: "27",
+  //     month: "NOV",
+  //     full: "Wed 27 Nov 2024",
+  //   },
+  //   link: "https://dice.fm/event/v386o6-neko-own-world-27th-nov-the-victoria-london-tickets",
+  // },
 ]);
 </script>
 
@@ -141,6 +119,6 @@ const shows = ref([
 
 .no-shows {
   font-size: 1.1rem;
-  color: #cccccc;
+  color: #ffffff;
 }
 </style>
