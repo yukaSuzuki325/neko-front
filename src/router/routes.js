@@ -1,18 +1,18 @@
+import MainLayout from "layouts/MainLayout.vue";
+
 const routes = [
+  { path: "/", name: "home", component: MainLayout },
+  { path: "/news", name: "news", component: MainLayout },
+  { path: "/shows", name: "shows", component: MainLayout },
+  { path: "/videos", name: "videos", component: MainLayout },
+  { path: "/discography", name: "discography", component: MainLayout },
+  { path: "/merch", name: "merch", component: MainLayout },
+  { path: "/about", name: "about", component: MainLayout },
+  { path: "/contact", name: "contact", component: MainLayout },
   {
-    path: '/',
-    component: () => import('layouts/MainLayout.vue'),
-    children: [
-      { path: '', component: () => import('pages/IndexPage.vue') }
-    ]
+    path: "/:catchAll(.*)*",
+    component: () => import("pages/ErrorNotFound.vue"), // Keep the error page
   },
+];
 
-  // Always leave this as last one,
-  // but you can also remove it
-  {
-    path: '/:catchAll(.*)*',
-    component: () => import('pages/ErrorNotFound.vue')
-  }
-]
-
-export default routes
+export default routes;

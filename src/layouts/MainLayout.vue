@@ -138,6 +138,9 @@ import DiscographyComp from "../components/DiscographyComp.vue";
 import MerchComp from "../components/MerchComp.vue";
 import AboutComp from "../components/AboutComp.vue";
 import ContactComp from "../components/ContactComp.vue";
+import { useRouter } from "vue-router";
+
+const router = useRouter();
 
 const $q = useQuasar();
 const showMenu = ref(false);
@@ -156,6 +159,8 @@ const sections = [
 
 // Scroll function that uses `getElementById` to locate section by `id`
 const scrollTo = (sectionId) => {
+  // Update the URL
+  router.push({ path: `/${sectionId}` });
   const section = document.getElementById(sectionId);
   if (section) {
     section.scrollIntoView({ behavior: "smooth" });
@@ -178,6 +183,14 @@ const handleScroll = () => {
 
 onMounted(() => {
   window.addEventListener("scroll", handleScroll);
+});
+
+onMounted(() => {
+  const hash = window.location.hash.replace("#/", "");
+  const section = document.getElementById(hash);
+  if (section) {
+    section.scrollIntoView({ behavior: "smooth" });
+  }
 });
 
 onBeforeUnmount(() => {
